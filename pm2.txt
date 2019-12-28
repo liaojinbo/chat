@@ -1,0 +1,2 @@
+echo ". ~/.nvm/nvm.sh" >> /etc/profile
+source /etc/profile
