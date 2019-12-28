@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+		<meta charset="UTF-8">
+        <title>聊天室</title>
+		<link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+	</head>
+ 
+	<body>
+ 
+		<!-- 登录界面 -->
+
+		<div id="loginbox">
+			<input type="text" placeholder="请输入你的名字" id="txt">
+			<button id="btn" onclick="getName();">注册</button>
+		</div>
+		<div class="chatroom">
+
+			<!--左侧-->
+			<div class="left">
+ 
+				<!--头像-->
+				<div class="icon-container">
+ 
+					<img src="/public/img/1.jpg" />
+ 
+				</div>
+ 
+				<!--个人简介-->
+				<div class="self-container">
+ 
+					<div class="id">号码</div>
+ 
+					<div class="content">
+ 
+						<!--姓名-->
+						<div class="name">姓名</div>
+
+					</div>
+ 
+				</div>
+ 
+				<!--聊天室说明-->
+				<div class="note-containernote-container">
+						<!-- <h1>当前在线人员:</h1> -->
+				</div>
+			</div>
+ 
+			<!--右侧-->
+			<div class="right">
+				<!--顶部固定导航-->
+				<div class="head">聊天室(<span id="count">0</span>)</div>
+
+				<!--聊天记录-->
+				<div class="chat-container">
+ 
+				</div>
+ 
+				<!--底部输入框-->
+				<div class="input-container">
+ 
+					<div class="input-content">
+						<input id="msg" autofocus="autofocus" value="" oninput="inputMessage()" placeholder="请输入聊天内容…" />
+						<div class="num">0/30</div>
+					</div>
+ 
+					<div class="send" onclick="send()">发送</div>
+ 
+				</div>
+ 
+			</div>
+ 
+		</div>
+ 
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+		<script src="/public/js/client.js"></script>
+	</body>
+</html>
